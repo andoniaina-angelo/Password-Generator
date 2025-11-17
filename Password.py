@@ -48,7 +48,22 @@ for n in range(len(password)):
         else:
             print("Error:manque nbr")
             password=input("veuillez entrer votre mot de passe : ")
-            n=0
+            n=0 
+p=0
+while p<len(password):
+    if password[p] in"!@#$%^&*":
+        print("chara ok")
+        break
+    else:
+        p+=1
+    while p==len(password):
+        if password[-1] in "!@#$%^&*":
+            print("chara bonga ! ")
+            break
+        elif password[-1] not in "!@#$%^&*":
+            print("Error: manque chara")
+            password=input("veuillez entrer votre mot de passe : ")
+            p=0 
         
 
    
