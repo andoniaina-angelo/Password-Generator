@@ -17,16 +17,16 @@ while i<len(password):
         else:
             print("Error:manque maj")
             i=0
-            password=input("veuillez entrer votre mot de passe : ")    
+            password=input("veuillez entrer votre mot de hbpasse : ")    
 
 c=0
 while c<len(password):
     if password[c].islower():
-        print("contient min")
+        print("min ok")
         break
    
     elif password[-1].islower():
-        print("la dernière est minuscule")
+        print("min ok")
         break
     elif password[-1].isupper():    
         print("Error:manque min")
@@ -34,8 +34,21 @@ while c<len(password):
         c=0
     else:
         c+=1
-
-        
+n=0
+for n in range(len(password)):
+    if password[n].isdigit():
+        print("nbr ok")
+        break
+    else:
+        n+=1
+    while n==len(password):
+        if password[-1].isdigit():
+            print("nbr ok")
+            break
+        else:
+            print("Error:manque nbr")
+            password=input("veuillez entrer votre mot de passe : ")
+            n=0
         
 
    
